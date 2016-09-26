@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    NWSC Loan managment System Admin
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/adefault.aspx" Text="Admin-Home"/>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="User-Home"/>
+                        <asp:MenuItem NavigateUrl="~/auser.aspx" Text="Admin Users"/>
+                         <asp:MenuItem NavigateUrl="~/reguser.aspx" Text="Register Users"/>
+                        <asp:MenuItem NavigateUrl="~/Access.aspx" Text="Access"/>
+                        <asp:MenuItem NavigateUrl="~/listuser.aspx" Text="List-Applicants"/>
+                      
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
